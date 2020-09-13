@@ -1,12 +1,12 @@
 <template>
-  <div class="home">
-    首页
+  <div class="Stategy">
+    攻略中心
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Home'
+  name: 'Strategy'
 }
 </script>
 
