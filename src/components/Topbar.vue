@@ -21,7 +21,8 @@ export default {
     height: 35px;
   }
   .topbar {
-    height: 55px
+    position: sticky;
+    height: 55px;
   }
   .navbar {
     height: 46px;

@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <topbar/>
-    <navbar height="46px" fontSize='16px' :navList='navList'/>
+    <topbar class="topbar" v-if="showBar"/>
+    <navbar class="navbar" v-if="showBar" height="46px" fontSize='16px' :navList='navList' fontColor="#ededed"/>
     <router-view/>
   </div>
 </template>
@@ -25,10 +25,20 @@ export default {
         { to: '/competition', text: '赛事中心' }
       ]
     }
+  },
+  computed: {
+    // 是否展示bar组件
+    showBar() {
+      return this.$store.state.showBar
+    }
   }
 }
 </script>
 
 <style scoped>
-
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 9;
+}
 </style>
